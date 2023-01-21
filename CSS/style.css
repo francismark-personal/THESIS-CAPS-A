@@ -1,0 +1,324 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+}
+nav{
+    background: #282E3A;
+    height: 80px;
+    width: 100%;
+}
+label.logo img{
+    height: 80px;
+    padding: 15px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 7px 30px;
+    border-radius: 3px;
+}
+a.active{
+    color: #ffffff !important;
+    background: #54617a79;
+    transition: 5ms;
+}
+ul ul{
+    position: absolute;
+    top: 70px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 3ms;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #282e3a54;
+}
+ul ul li{
+    position: relative;
+    margin: 0px;
+    float: none;
+    display: list-item;
+    background: #ffffff;
+    
+}
+ul ul li a{
+    color: #282E3A;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0 15px;
+}
+ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+}
+ul ul li:hover{
+    background-color: #475268;
+    transition: 5ms;
+}
+ul ul li:hover > a{
+    color: #ffffff;
+    transition: 5ms;
+}
+h1{
+    font-size: 80px;
+    margin: 0 15px;
+}
+.news{
+    padding: 25px 0;
+}
+.content{
+    margin: 32px 0;
+}
+.item{
+    cursor: pointer;
+    margin: 24px 0;
+}
+.img{
+    position: relative;
+    overflow: hidden;
+}
+.img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000000a;
+}
+.img img{
+    transition: all 0.5s ease;
+    width: 100%;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    background: #282e3a83;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+}
+.content-title{
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.content-title a{
+    color: #282E3A;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+    .item{
+        margin: 0;
+    }
+}
+.post{
+    width: 90%;
+    max-width: 98rem;
+    height: 35rem;
+    margin: 5rem;
+    padding: 5rem;
+    background-color: #ffffff;
+    box-shadow: 0 1.4rem 8rem #00000033;
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+}
+.post-img{
+    min-width: 35rem;
+    max-width: 35rem;
+    height: 30rem;
+    transform: translateX(-8rem);
+    position: relative;
+}
+.post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+}
+.post-title h1{
+    font-size: 30px;
+    margin: 1.5rem 4rem;
+}
+.post-title p{
+    margin-left: 3rem;
+    font-size: 1rem;
+}
+.read-more{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #39B54A, #5DD1F9);
+    border-radius: 2rem;
+}
+.about{
+    text-align: justify;
+    width: 60%;
+    margin: auto;
+    line-height: 2em;
+}
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+header .container {
+    position: relative;
+    z-index: 2;
+}
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+.container .header {
+    font-size: 7em;
+    color: #ffffff;
+    padding: 1.5em 0;
+}
+.about a{
+    color: #ED1E79;
+    text-decoration: underline;
+}
+.about a:hover{
+    background: #ED1E79;
+    color: #ffffff;
+    transition: all .35s;
+}
+.slider {
+    margin: 3em auto;
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: -2px 11px 13px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: -2px 11px 13px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: -2px 11px 13px 5px rgba(0,0,0,0.3);
+}
+.slides {
+    display: flex;
+}
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#next-btn,
+#prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+#next-btn:focus,
+#prev-btn:focus {
+    outline: none;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .sliders {
+    position: relative;
+    display: none;
+  }
