@@ -9,6 +9,8 @@ body{
     font-family: montserrat;
 }
 nav{
+    position: fixed;
+    top: 0;
     background: #282E3A;
     height: 80px;
     width: 100%;
