@@ -2,6 +2,8 @@
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -168,6 +170,7 @@ form .txt_field{
   margin: -5px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
+  font-size: small;
 }
 .pass:hover{
   text-decoration: underline;
